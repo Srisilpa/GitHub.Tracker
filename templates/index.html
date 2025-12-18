@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Activity Tracker</title>
+</head>
+<body>
+    <h2>GitHub Activity Tracker</h2>
+
+    <form method="post">
+        <label>Enter Regd No / GitHub usernames (comma separated):</label><br><br>
+
+        <input type="text" name="students" style="width:400px"><br><br>
+
+        <button type="submit" name="action" value="selected">
+            Generate Selected Students PDF
+        </button>
+
+        <br><br>
+        <hr>
+        <br>
+
+        <button type="submit" name="action" value="all">
+            Generate ALL Students PDF
+        </button>
+    </form>
+
+    <br>
+    {% if message %}
+        <p><b>{{ message }}</b></p>
+    {% endif %}
+</body>
+</html>
